@@ -156,6 +156,8 @@ button {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
   overflow: hidden;
   border-radius: 8px;
   background: #020304;
@@ -165,8 +167,9 @@ button {
 .video-scene {
   position: absolute;
   inset: 0;
+  /* 提醒：如果 scene.png 不是 3840×2160 横版图，请重新导出为 16:9 规格以获得最佳适配效果 */
   background-image: url("./assets/scene.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #020304;
@@ -1001,10 +1004,9 @@ body {
 }
 
 /* 播放器高度更柔和，避免低高度笔记本首屏被撑爆 */
+/* 移除固定高度限制，保持全局 16:9 */
 .player {
-  height: clamp(460px, 40vw, 670px);
   min-height: 0;
-  max-height: calc(100vh - 150px);
 }
 
 /* 右侧栏不要死撑高度 */
@@ -1225,8 +1227,7 @@ body {
   }
 
   .player {
-    height: clamp(420px, 39vw, 540px);
-    max-height: calc(100vh - 118px);
+    min-height: 0;
   }
 
   .player-controls {
@@ -1503,8 +1504,7 @@ body {
 /* ===== 特别矮的录屏窗口兜底 ===== */
 @media (max-height: 720px) {
   .player {
-    height: clamp(390px, 37vw, 500px);
-    max-height: calc(100vh - 100px);
+    min-height: 0;
   }
 
   .choice-mode {
