@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>雪落旧山门 - AI 叙事伴生 Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell" data-stage="entry">
+      <header class="topbar">
+        <div class="brand">
+          <span class="play-mark"></span>
+          <span>腾讯视频</span>
+        </div>
+        <nav class="nav-links" aria-label="主导航">
+          <a href="#">首页</a>
+          <a class="active" href="#">电视剧</a>
+          <a href="#">电影</a>
+          <a href="#">综艺</a>
+          <a href="#">动漫</a>
+          <a href="#">少儿</a>
+          <a href="#">纪录片</a>
+          <a href="#">全部</a>
+        </nav>
+        <label class="search">
+          <span>雪落旧山门 沈照递刀人</span>
+          <button aria-label="搜索">⌕</button>
+        </label>
+        <div class="top-actions" aria-label="用户操作">
+          <button class="vip">开通会员</button>
+          <button>看过</button>
+          <button>收藏</button>
+          <button>上传</button>
+          <button>客户端</button>
+          <button class="login">登录</button>
+        </div>
+      </header>
+
+      <main class="content-grid">
+        <section class="watch-column">
+          <section class="player" aria-label="视频播放器">
+            <div class="video-scene" aria-hidden="true"></div>
+            <div class="video-vignette" aria-hidden="true"></div>
+            <div class="ai-layer" id="aiLayer"></div>
+            <div class="player-controls" aria-label="播放控制条">
+              <div class="progress">
+                <span class="progress-fill"></span>
+                <button class="ai-pin" aria-label="AI 叙事伴生节点">AI</button>
+              </div>
+              <div class="control-row">
+                <button class="play-button" aria-label="播放"></button>
+                <button>下一集</button>
+                <button>10秒</button>
+                <button>弹幕</button>
+                <span class="time">55:40 / 80:00</span>
+                <span class="spacer"></span>
+                <button>原声</button>
+                <button>4K</button>
+                <button>倍速 1.0x</button>
+                <button>音量</button>
+                <button>设置</button>
+                <button>全屏</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="comments" aria-label="用户评价">
+            <h2>用户评价</h2>
+            <div class="comment-grid">
+              <article>
+                <div class="comment-head">
+                  <span class="avatar">江</span>
+                  <strong>江湖夜雨</strong>
+                  <span class="stars">★★★★★</span>
+                  <time>5小时前</time>
+                </div>
+                <p>这一集最后十分钟太压抑了，沈照明明可以置身事外。</p>
+                <div class="comment-actions">赞 128　回复</div>
+              </article>
+              <article>
+                <div class="comment-head">
+                  <span class="avatar green">旧</span>
+                  <strong>旧案重提</strong>
+                  <span class="stars">★★★★★</span>
+                  <time>3小时前</time>
+                </div>
+                <p>不拔刀的人，反而最像被命运逼到刀口上。</p>
+                <div class="comment-actions">赞 96　回复</div>
+              </article>
+              <article>
+                <div class="comment-head">
+                  <span class="avatar gray">山</span>
+                  <strong>山门听雪</strong>
+                  <span class="stars">★★★★★</span>
+                  <time>2小时前</time>
+                </div>
+                <p>旧山门这一幕值得反复看。</p>
+                <div class="comment-actions">赞 74　回复</div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <aside class="side-panel" aria-label="剧集信息">
+          <section class="show-card">
+            <h1>《雪落旧山门》</h1>
+            <p>第 8 集《不拔刀的人》</p>
+            <div class="rating"><strong>9.2分</strong><span>17308热度</span><button>开通VIP会员</button></div>
+            <div class="show-actions">
+              <button>加入收藏</button>
+              <button>下载</button>
+              <button>分享</button>
+              <button>一起看</button>
+            </div>
+          </section>
+
+          <section class="episodes">
+            <div class="section-head">
+              <h2>选集</h2>
+              <span>16集全 ›</span>
+            </div>
+            <div class="episode-grid">
+              <button>1</button><button>2</button><button>3</button><button>4</button>
+              <button>5</button><button>6</button><button>7</button><button class="current">8</button>
+              <button>9</button><button>10</button><button>11</button><button>12</button>
+              <button>13</button><button>14</button><button>15</button><button>16</button>
+            </div>
+          </section>
+
+          <section class="shorts">
+            <div class="section-head">
+              <h2>相关短视频</h2>
+              <span>换一换</span>
+            </div>
+            <article>
+              <img src="./assets/thumb-gate.png" alt="" />
+              <div><strong>旧山门雪夜：</strong><p>沈照抵达山门</p></div>
+              <time>01:12</time>
+            </article>
+            <article>
+              <img src="./assets/thumb-nail.png" alt="" />
+              <div><strong>刀匣特写：</strong><p>半月铜钉露出旧痕</p></div>
+              <time>00:48</time>
+            </article>
+            <article>
+              <img src="./assets/thumb-visitor.png" alt="" />
+              <div><strong>十年旧案再起：</strong><p>山门来人是谁</p></div>
+              <time>01:15</time>
+            </article>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
